@@ -29,7 +29,10 @@ const AppWrapper = styled.div`
   
 `
 const MainWrapper = styled.div`
-  min-height: calc(100vh - 50px - 100px);
+  min-height: calc(100vh - 40px - 100px);
+  @media (max-width: 800px) {
+    min-height: calc(100vh - 40px - 140px);
+  }
 `
 
 export default App;
