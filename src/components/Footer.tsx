@@ -3,23 +3,24 @@ import { FaTelegram } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import { ImMail4 } from "react-icons/im";
 
+
 const Footer = () => {
   return ( 
     <FooterWrapper>
-      <DownloadCVButton href="./src/assets/media/Avatar.png" download="LemeshevArtem_CV.png">
+      <DownloadCVButton href="./src/assets/media/Avatar.png" download="LemeshevArtem_CV.png">  {/*Зименить файл скачивания*/}
         Скачать CV
       </DownloadCVButton>
       <span>Лемешев Артем // FrontEnd разработка</span>
       <Socials>
-        <FaTelegram size={30}/>
-        <FaGithub size={30}/>
-        <ImMail4 size={30}/>
+        <a href="https://t.me/insaneluvvv" target="_blank"><FaTelegram size={30} color="#909090" /></a>  
+        <a href="https://github.com/insaneluvvv" target="_blank"><FaGithub size={30} color="#909090" /></a>
+        <a href="mailto:lemeshev.artem@insaneluv.ru" target="_blank"><ImMail4 size={30} color="#909090" /></a>
       </Socials>
     </FooterWrapper>
    );
 }
  
-const FooterWrapper = styled.div`
+const FooterWrapper = styled.footer`
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -46,7 +47,7 @@ const DownloadCVButton = styled.a`
   font-size: 18px;
   font-weight: 600;
   color: #303030;
-  transition: 300ms ease;
+  transition: 00ms ease;
   &:hover{
     background-color: #707070;
   }
