@@ -26,7 +26,8 @@ const App = () => {
 }
 
 const AppWrapper = styled.div`
-  
+  min-height: 100%;
+
 `
 const MainWrapper = styled.div`
   min-height: calc(100vh - 50px - 40px - 100px);

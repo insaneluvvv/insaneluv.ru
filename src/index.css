@@ -5,16 +5,60 @@
   margin: 0;
   padding: 0;
   font-family: "Rubik", serif;
+  font-size: 18px;
   font-weight: 400;
 }
 
 body {
   background-color: #202020;
-  color: #fff;
-  height: 100%;
+  color: #c5c5c5;
+  
 }
 
 a {
   text-decoration: none;
-  color: #fff;
+  color: #21A049;
+}
+
+
+/* Шрифты */
+
+.name-font {
+  font-family: "Rubik", serif;
+  font-weight: 700;
+  font-size: 30px;
+  margin-bottom: 5px;
+}
+
+.prof-font {
+  font-family: "Rubik", serif;
+  font-weight: 500;
+  font-size: 24px;
+  color: #c5c5c5;
+}
+
+.section-title {
+  font-family: "Rubik", serif;
+  font-weight: 700;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.default-font {
+  font-family: "Rubik", serif;
+  font-weight: 400;
+  font-size: 18px;
+  color: #c5c5c5;
+  margin-bottom: 5px;
+  a {
+    text-decoration: underline;
+  }
+}
+
+.accent-font {
+  font-family: "Rubik", serif;
+  font-weight: 400;
+  font-size: 18px;
+  color: #21A049;
+  margin-bottom: 5px;
 }
