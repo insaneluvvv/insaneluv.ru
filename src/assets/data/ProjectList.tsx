@@ -1,6 +1,7 @@
 interface ProjectInt {
   id: number,
-  tag: string,
+  type: string,
+  tag: string[],
   name: string,
   desc: string,
   img: string,
@@ -11,22 +12,35 @@ interface ProjectInt {
 const initProject: Array<ProjectInt> = [
   {
     id: 1,
-    tag: "Пет проект",
+    type: "Пет проект",
+    tag: ["React", "TypeScript", "Styled Components", "React Router Dom", "firebase"],
     name: "Личный сайт",
-    desc: "test",
+    desc: "Первый проект, посвященный разработке личного сайта портфолио-резюме.",
     img: "/src/assets/media/portfolio/Portfolio_record.webp",
     link: "https://insaneluv.ru/",
     git: "https://github.com/insaneluvvv/insaneluv.ru"
   },
   {
     id: 2,
-    tag: "Пет проект",
+    type: "Пет проект",
+    tag: ["React", "TypeScript", "Styled Components", "React Router Dom", "firebase"],
     name: "Личный сайт",
-    desc: "test",
+    desc: "Первый проект, посвященный разработке личного сайта портфолио-резюме.",
     img: "/src/assets/media/portfolio/Portfolio_record.webp",
     link: "https://insaneluv.ru/",
     git: "https://github.com/insaneluvvv/insaneluv.ru"
-  }
+  },
+  {
+    id: 3,
+    type: "Пет проект",
+    tag: ["React", "TypeScript", "Styled Components", "React Router Dom", "firebase"],
+    name: "Личный сайт",
+    desc: "Первый проект, посвященный разработке личного сайта портфолио-резюме.",
+    img: "/src/assets/media/portfolio/Portfolio_record.webp",
+    link: "https://insaneluv.ru/",
+    git: "https://github.com/insaneluvvv/insaneluv.ru"
+  },
+  
 ]
 
 export default initProject;

@@ -93,12 +93,18 @@ const Home = () => {
 					<ProjectBlock>
 						<ProjectName>
 							<span className="section-title">{el.name}</span>
-							<ProjectTagGreen><span>{el.tag}</span></ProjectTagGreen>
+							<ProjectType><p>{el.type}</p></ProjectType>
 						</ProjectName>
-						<ProjectDesc>{el.desc}</ProjectDesc>
 						<img src={el.img} alt={el.name} />
-						<ProjectGitBtn onClick={() => {window.open(el.git)}}>GitHub</ProjectGitBtn>
-						<PrototypeBtn onClick={() => {window.open(el.link)}}>Рабочий прототип</PrototypeBtn>
+						<ProjectDesc>{el.desc}</ProjectDesc>
+						<ProjectTags>
+							{el.tag.map(ob => <div>{ob}</div>)}
+						</ProjectTags>
+						<ProjectBtns>
+							<ProjectGitBtn onClick={() => {window.open(el.git)}}>GitHub</ProjectGitBtn>
+							<PrototypeBtn onClick={() => {window.open(el.link)}}>Рабочий прототип</PrototypeBtn>
+						</ProjectBtns>
+
 					</ProjectBlock>
 				)}
 			</PortfolioContainer>
@@ -116,7 +122,7 @@ const SplitLine = styled.div`
 `;
 
 const HomeWrapper = styled.div`
-	margin: 50px 10%;
+	margin: 0 10%;
 	width: 80%;
 `;
 
@@ -255,9 +261,9 @@ const ProjectSplit = styled.div`
 	display: flex;
 	justify-content: space-between;
 	background-color: #21A049;
+	border-radius: 10px;
 	padding: 5px 20px;
 	margin: 50px 0;
-
 	span {
 		font-family: "Unbounded", serif;
 		font-weight: 700;
@@ -269,7 +275,8 @@ const ProjectSplit = styled.div`
 
 const PortfolioContainer = styled.div`
 	display: flex;
-	justify-content: space-between;
+	justify-content: center;
+	flex-wrap: wrap;
 	gap: 50px;
 	margin-top: 30px;
 `;
@@ -277,46 +284,91 @@ const PortfolioContainer = styled.div`
 const ProjectBlock = styled.div`
 	display: flex;
 	flex-direction: column;
-	max-width: 500px;
-	width: 100%;
-	padding: 20px;
-	background-color: #404040;
+	width: 400px;
+	max-width: 100%;
+
+	padding: 30px;
+	/* background-color: #404040; */
 	img {
 		width: 100%;
+		border-radius: 10px;
+		margin-bottom: 20px;
 	}
 `;
 
 const ProjectName = styled.div`
+	display: inline-block;
 	display: flex;
 	align-items: center;
+	height: 30px;
 		span {
+		color: #21A049;
 		margin-bottom: 5px;
-		margin-right: 10px;
+		margin-right: 20px;
 	}
+	margin-bottom: 20px;
 `;
 
-const ProjectTagGreen = styled.div`
+const ProjectType = styled.div`
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background-color: #21A049;
+	background-color: #6d9189;
   color: #202020;
   border-radius: 16px;
-	width: 200px;
-	height: 24px;
-
+	height: 28px;
+	padding-left: 20px;
+	padding-right: 20px;
 `;
 
 const ProjectDesc = styled.span`
-	
+	margin-bottom: 20px;
+	min-height: 66px;
+`;
+
+const ProjectTags = styled.div`
+	display: flex;
+	flex-wrap: wrap;
+	margin-bottom: 20px;
+	div {
+	font-size: 16px;
+		background-color: #202020;
+		color: #6d9189;
+		border: 2px solid #6d9189;
+		padding: 2px 8px;
+		margin-right: 5px;
+		margin-bottom: 10px;
+		border-radius: 15px;
+	}
+`;
+
+const ProjectBtns = styled.div`
+	display: flex;
 `;
 
 const ProjectGitBtn = styled.button`
-	
+	border: 0;
+	padding: 8px 20px;
+	border-radius: 10px;
+	background-color: #21A049;
+	margin-right: 10px;
+	cursor: pointer;
+	transition: 200ms ease;
+	&:hover {
+		background-color: #1b7e39;
+	}
 `;
 
 const PrototypeBtn = styled.button`
-	
+	border: 0;
+	padding: 8px 20px;
+	border-radius: 10px;
+	background-color: #21A049;
+	cursor: pointer;
+	transition: 200ms ease;
+	&:hover {
+		background-color: #1b7e39;
+	}
 `;
 
 export default Home;
