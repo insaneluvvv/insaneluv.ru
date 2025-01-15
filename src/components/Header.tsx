@@ -18,13 +18,14 @@ const HeaderWrapper = styled.header`
   width: 100%;
   height: 40px;
   background-color: #21A049;
-  transition: 300ms ease;
+  transition: 200ms ease;
+  margin-bottom: 50px;
   span {
     color: #202020;
     font-family: "Unbounded", serif;
     font-size: 25px;
     font-weight: 600;
-    transition: 500ms ease;
+    transition: 300ms ease;
   }
   
   &:hover {

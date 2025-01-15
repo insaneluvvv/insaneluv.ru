@@ -29,6 +29,7 @@ const FooterWrapper = styled.footer`
   background-color: #303030;
   color: #909090;
   padding: 0 5%;
+  margin-top: 50px;
   @media (max-width: 800px) {
     flex-direction: column;
     padding: 20px 5%;
@@ -47,7 +48,7 @@ const DownloadCVButton = styled.a`
   font-size: 18px;
   font-weight: 600;
   color: #303030;
-  transition: 00ms ease;
+  transition: 200ms ease;
   &:hover{
     background-color: #707070;
   }
