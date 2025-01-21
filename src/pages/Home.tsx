@@ -80,6 +80,8 @@ const Home = () => {
 							<li>Всегда использую <span className="accent-font">TypeScript</span>, вместо <span className="accent-font">JavaScript</span>, как более хорошую практику</li>
 							<li>Для стилизации компонентов использую <span className="accent-font">Styled Components</span></li>
 							<li>Для роутинга использую <span className="accent-font">React Router Dom</span></li>
+							<li>Пользуюсь <span className="accent-font">Git</span></li>
+							<li>Для работы с проектом использую <span className="accent-font">Vite</span></li>
 						</ol>
 					</AboutContainer>
 				</InfoContainer>
