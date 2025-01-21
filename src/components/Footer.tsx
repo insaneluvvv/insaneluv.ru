@@ -2,16 +2,16 @@ import styled from "styled-components";
 import { FaTelegram } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import { ImMail4 } from "react-icons/im";
-import Avatar from "./../assets/media/Avatar.png"
+import CV_LemeshevAA from "./../assets/media/CV_LemeshevAA.pdf"
 
 
 const Footer = () => {
   return ( 
     <FooterWrapper>
-      <DownloadCVButton href={Avatar} download="LemeshevArtem_CV.png">  {/*Зименить файл скачивания*/}
+      <DownloadCVButton href={CV_LemeshevAA} download="CV_LemeshevAA.png">  {/*Зименить файл скачивания*/}
         Скачать CV
       </DownloadCVButton>
-      <span>Лемешев Артем // FrontEnd разработка</span>
+      <span>// Лемешев Артем //</span>
       <Socials>
         <a href="https://t.me/insaneluvvv" target="_blank"><FaTelegram size={30} color="#909090" /></a>  
         <a href="https://github.com/insaneluvvv" target="_blank"><FaGithub size={30} color="#909090" /></a>
