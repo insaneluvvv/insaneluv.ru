@@ -148,6 +148,12 @@ const AvatarContainer = styled.div`
 	align-items: center;
 	width: 300px;
 	margin-right: 80px;
+	@media (max-width: 1200px) {
+		margin-right: 0px;
+	}
+	@media (max-width: 600px) {
+		width: 150px;
+	}
 	.avatar {
 		min-width: 200px;
 		width: 100%;
@@ -236,6 +242,15 @@ const EducationContainer = styled.div`
 			cursor: pointer;
 		}
 	}
+	@media (max-width: 600px) {
+		div {
+			flex-direction: column;
+			img {
+				margin-right: 0px;
+				margin-bottom: 20px;
+			}
+		}
+	}
 `;
 
 const ExperienceContainer = styled.div`
@@ -248,6 +263,15 @@ const ExperienceContainer = styled.div`
 			margin-right: 30px;
 			width: 168px;
 			cursor: pointer;
+		}
+	}
+	@media (max-width: 600px) {
+		div {
+			flex-direction: column;
+			img {
+				margin-right: 0px;
+				margin-bottom: 20px;
+			}
 		}
 	}
 `;
@@ -295,7 +319,6 @@ const ProjectBlock = styled.div`
 	width: 400px;
 	max-width: 100%;
 
-	padding: 30px;
 	/* background-color: #404040; */
 	img {
 		width: 100%;
@@ -309,12 +332,17 @@ const ProjectName = styled.div`
 	display: flex;
 	align-items: center;
 	height: 30px;
+	margin-bottom: 20px;
 		span {
 		color: #21A049;
 		margin-bottom: 5px;
 		margin-right: 20px;
 	}
-	margin-bottom: 20px;
+	@media (max-width: 600px) {
+		flex-direction: column;
+		align-items: start;
+		height: 60px;
+	}
 `;
 
 const ProjectType = styled.div`
@@ -359,6 +387,7 @@ const ProjectGitBtn = styled.button`
 	padding: 8px 20px;
 	border-radius: 10px;
 	background-color: #21A049;
+	color: #303030;
 	margin-right: 10px;
 	cursor: pointer;
 	transition: 200ms ease;
@@ -372,6 +401,7 @@ const PrototypeBtn = styled.button`
 	padding: 8px 20px;
 	border-radius: 10px;
 	background-color: #21A049;
+	color: #303030;
 	cursor: pointer;
 	transition: 200ms ease;
 	&:hover {
