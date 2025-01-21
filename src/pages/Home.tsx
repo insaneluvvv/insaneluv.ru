@@ -2,6 +2,10 @@ import styled from "styled-components";
 
 import { DevSkillsFirst, DevSkillsSecond, AdditionalSkills } from "../assets/data/SkillsList"
 import initProject from "../assets/data/ProjectList";
+import Avatar from "./../assets/media/Avatar.png";
+import InsaneLuvLogo from "./../assets/media/InsaneLuv Logo.png";
+import MisisLogo from "./../assets/media/Misis Logo.svg";
+import TeleTribeLogo from "./../assets/media/Teletribe Logo.png";
 
 
 const Home = () => {
@@ -9,8 +13,8 @@ const Home = () => {
 		<HomeWrapper>
 			<MainContainer>
 				<AvatarContainer>
-					<img className="avatar" src="./src/assets/media/Avatar.png" alt="Avatar" />
-					<img className="logo" src="./src/assets/media/InsaneLuv Logo.png" alt="InsaneLuv Logo" />
+					<img className="avatar" src={Avatar} alt="Avatar" />
+					<img className="logo" src={InsaneLuvLogo} alt="InsaneLuv Logo" />
 				</AvatarContainer>
 				<InfoContainer>
 					<NameContainer>
@@ -50,7 +54,7 @@ const Home = () => {
 					<EducationContainer>
 						<span className="section-title">Образование</span>
 						<div>
-							<img src="./src/assets/media/Misis Logo.svg" alt="Misis Logo" onClick={() => {window.open('https://misis.ru/');}}/>
+							<img src={MisisLogo} alt="Misis Logo" onClick={() => {window.open('https://misis.ru/');}}/>
 							<span className="default-font">Университет науки и технологий МИСИС<br/>
 											Специальность: Информационные системы и технологии<br/>
 											Степень: Бакалавр<br/>
@@ -63,7 +67,7 @@ const Home = () => {
 					<ExperienceContainer>
 						<span className="section-title">Опыт работы</span>
 						<div>
-							<img src="./src/assets/media/Teletribe Logo.png" alt="Misis Logo" onClick={() => {window.open('https://www.teletribe.ru/');}}/>
+							<img src={TeleTribeLogo} alt="TeleTribe Logo" onClick={() => {window.open('https://www.teletribe.ru/');}}/>
 							<span className="default-font">Контакт-центр TeleTribe<br/>
 											Должность: Системный администратор<br/>
 											Период: 2024 Февраль - Настоящее время
@@ -130,7 +134,12 @@ const HomeWrapper = styled.div`
 
 const MainContainer = styled.div`
 	 display: flex;
-	 
+	 flex-direction: row;
+	 @media (max-width: 1200px) {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	 }
 `;
 
 const AvatarContainer = styled.div`
@@ -138,7 +147,6 @@ const AvatarContainer = styled.div`
 	flex-direction: column;
 	align-items: center;
 	width: 300px;
-	height: 600px;
 	margin-right: 80px;
 	.avatar {
 		min-width: 200px;
@@ -153,8 +161,6 @@ const AvatarContainer = styled.div`
 		top: -50px;
 		left: 30px;
 	}
-	/* position: sticky;
-	top: 90px; */
 `;
 
 const InfoContainer = styled.div`

@@ -1,4 +1,6 @@
-interface ProjectInt {
+import PersonalSite from "./../media/portfolio/Portfolio_record.webp";
+
+type ProjectInt = {
   id: number,
   type: string,
   tag: string[],
@@ -16,7 +18,7 @@ const initProject: Array<ProjectInt> = [
     tag: ["React", "TypeScript", "Styled Components", "React Router Dom", "firebase"],
     name: "Личный сайт",
     desc: "Первый проект, посвященный разработке личного сайта портфолио-резюме.",
-    img: "/src/assets/media/portfolio/Portfolio_record.webp",
+    img: PersonalSite,
     link: "https://insaneluv.ru/",
     git: "https://github.com/insaneluvvv/insaneluv.ru"
   },
@@ -26,7 +28,7 @@ const initProject: Array<ProjectInt> = [
     tag: ["React", "TypeScript", "Styled Components", "React Router Dom", "firebase"],
     name: "Личный сайт",
     desc: "Первый проект, посвященный разработке личного сайта портфолио-резюме.",
-    img: "/src/assets/media/portfolio/Portfolio_record.webp",
+    img: PersonalSite,
     link: "https://insaneluv.ru/",
     git: "https://github.com/insaneluvvv/insaneluv.ru"
   },
@@ -36,7 +38,7 @@ const initProject: Array<ProjectInt> = [
     tag: ["React", "TypeScript", "Styled Components", "React Router Dom", "firebase"],
     name: "Личный сайт",
     desc: "Первый проект, посвященный разработке личного сайта портфолио-резюме.",
-    img: "/src/assets/media/portfolio/Portfolio_record.webp",
+    img: PersonalSite,
     link: "https://insaneluv.ru/",
     git: "https://github.com/insaneluvvv/insaneluv.ru"
   },

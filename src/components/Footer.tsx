@@ -2,12 +2,13 @@ import styled from "styled-components";
 import { FaTelegram } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import { ImMail4 } from "react-icons/im";
+import Avatar from "./../assets/media/Avatar.png"
 
 
 const Footer = () => {
   return ( 
     <FooterWrapper>
-      <DownloadCVButton href="./src/assets/media/Avatar.png" download="LemeshevArtem_CV.png">  {/*Зименить файл скачивания*/}
+      <DownloadCVButton href={Avatar} download="LemeshevArtem_CV.png">  {/*Зименить файл скачивания*/}
         Скачать CV
       </DownloadCVButton>
       <span>Лемешев Артем // FrontEnd разработка</span>
