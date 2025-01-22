@@ -18,6 +18,8 @@ export const AdditionalSkills : Array<string> = [
   `Figma`,
   `Adobe Photoshop`,
   `Adobe Illustrator`,
-  `Администрирование сервера Ubuntu`,
-  `Администрирование домена`
+  `Graphic design`,
+  `UI/UX`,
+  `Администрирование домена`,
+  `Администрирование VPS`
 ]
