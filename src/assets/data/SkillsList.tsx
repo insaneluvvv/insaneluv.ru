@@ -4,12 +4,12 @@ export const DevSkillsFirst : Array<string> = [
   `HTML`,
   `CSS`,
   `Git`,
-  `Vite`
+  `Vite`,
+  `React Router Dom`,
+  `Styled Component`,
 ]
 
 export const DevSkillsSecond : Array<string> = [
-  `React Router Dom`,
-  `Styled Component`,
   `Docker`,
   `Адаптивная верстка`
 ]
