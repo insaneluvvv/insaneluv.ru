@@ -31,18 +31,7 @@ const initProject: Array<ProjectInt> = [
     img: PersonalSite,
     link: "https://insaneluv.ru/",
     git: "https://github.com/insaneluvvv/insaneluv.ru"
-  },
-  {
-    id: 3,
-    type: "Пет проект",
-    tag: ["React", "TypeScript", "Styled Components", "React Router Dom", "firebase"],
-    name: "Личный сайт",
-    desc: "Первый проект, посвященный разработке личного сайта портфолио-резюме.",
-    img: PersonalSite,
-    link: "https://insaneluv.ru/",
-    git: "https://github.com/insaneluvvv/insaneluv.ru"
-  },
-  
+  }
 ]
 
 export default initProject;
