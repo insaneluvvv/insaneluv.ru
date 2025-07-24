@@ -1,25 +1,39 @@
-export const DevSkillsFirst : Array<string> = [
+export const DesignSkillsFirst : Array<string> = [
+  `Figma`,
+  `Adobe Photoshop`,
+  `Adobe Illustrator`,
+  `Логотипы`,
+  `Брендинг`,
+  `Баннеры`,
+  `Презентации`,
+  `Турниры`,
+  `Обложки`,
+  `Инфографика`,
+  `Социальные сети`,
+  `Одежда`,
+  `Интерфейсы`
+]
+
+export const AdminSkillsFirst : Array<string> = [
+  `Windows`,
+  `Ubuntu`,
+  `Администрирование Сервера/VPS`,
+  `VPN`,
+  `Администрирование домена`,
+  `MS Office`,
+  `1C`,
+  `Тех. поддерржка`,
+]
+
+export const DevSkills : Array<string> = [
   `React`,
   `TypeScript`,
   `HTML`,
   `CSS`,
   `Git`,
-  `Vite`,
   `React Router Dom`,
-  `Styled Component`,
-]
-
-export const DevSkillsSecond : Array<string> = [
+  `Styled Components`,
+  `Vite`,
   `Docker`,
-  `Адаптивная верстка`
-]
-
-export const AdditionalSkills : Array<string> = [
-  `Figma`,
-  `Adobe Photoshop`,
-  `Adobe Illustrator`,
-  `Graphic design`,
-  `UI/UX`,
-  `Администрирование домена`,
-  `Администрирование VPS`
+  `Адаптивная верстка`,
 ]

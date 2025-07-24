@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { DevSkillsFirst, DevSkillsSecond, AdditionalSkills } from "../assets/data/SkillsList"
+import { DesignSkillsFirst, AdminSkillsFirst, DevSkills } from "../assets/data/SkillsList"
 import initProject from "../assets/data/ProjectList";
 import Avatar from "./../assets/media/Avatar.png";
 import InsaneLuvLogo from "./../assets/media/InsaneLuv Logo.png";
@@ -19,74 +19,107 @@ const Home = () => {
 				<InfoContainer>
 					<NameContainer>
 						<span className="name-font">Лемешев Артем</span>
-						<span className="prof-font">FrontEnd Developer</span>
+						<span className="prof-font">Россия, Москва</span>
 					</NameContainer>
-					<SkillsContainer>
-						<span className="section-title">Навыки в разработке</span>
-						<DevSkillsContainer>
-							{DevSkillsFirst.map(el => 
-								<SkillTagGreen>
-									<span>{el}</span>
-								</SkillTagGreen>
-							)}
-							{DevSkillsSecond.map(el => 
-								<SkillTagBlack>
-									<span>{el}</span>
-								</SkillTagBlack>
-							)}
-						</DevSkillsContainer>
-						<span className="section-title">Дополнительные навыки</span>
-						<AdditionalSkillsContainer>
-							{AdditionalSkills.map(el => 
-								<SkillTagBlack>
-									<span>{el}</span>
-								</SkillTagBlack>
-							)}
-						</AdditionalSkillsContainer>
-					</SkillsContainer>
 					<ContactsContainer>
 						<span className="section-title">Контакты</span>
 						<span className="default-font">Telegram: <a href="https://t.me/insaneluvvv" target="_blank">@insaneluvvv</a> </span>
-						<span className="default-font">GitHub: <a href="https://github.com/insaneluvvv" target="_blank">https://github.com/insaneluvvv</a> </span>
 						<span className="default-font">Email: <a href="mailto:lemeshev.artem@insaneluv.ru" target="_blank">lemeshev.artem@insaneluv.ru</a> </span>
+						<span className="default-font">Personal Site: <a href="https://insaneluv.ru/" target="_blank">insaneluv.ru</a> </span>
 					</ContactsContainer>
 					<SplitLine></SplitLine>
 					<EducationContainer>
-						<span className="section-title">Образование</span>
-						<div>
-							<img src={MisisLogo} alt="Misis Logo" onClick={() => {window.open('https://misis.ru/');}}/>
-							<span className="default-font">Университет науки и технологий МИСИС<br/>
-											Специальность: Информационные системы и технологии<br/>
-											Степень: Бакалавр<br/>
-											Кафедра: ИКТ<br/>
-											Период обучения: 2020 - 2024 гг.
-							</span>
-						</div>
+						<span className="section-title">// Образование</span>
+						<ContainerElement>
+								<img src={MisisLogo} alt="Misis Logo" onClick={() => {window.open('https://misis.ru/');}}/>
+								<ContainerElementInfo>
+									<ElementInfoMain>
+										<p className="element-title">Университет науки и технологий МИСИС</p>
+										<p className="default-title">Период обучения: 2020 - 2024 гг.</p>
+									</ElementInfoMain>
+									<span>Специальность: Информационные системы и технологии<br/>
+									Степень: Бакалавр<br/>
+									Кафедра: ИКТ<br/></span>
+								</ContainerElementInfo>	
+						</ContainerElement>
 					</EducationContainer>
 					<SplitLine></SplitLine>
 					<ExperienceContainer>
-						<span className="section-title">Опыт работы</span>
-						<div>
+						<span className="section-title">// Опыт работы</span>
+						<ContainerElement>
+								<img src={InsaneLuvLogo} alt="InsaneLuv Logo" onClick={() => {window.open('https://insaneluv.ru/');}}/>
+								<ContainerElementInfo>
+									<ElementInfoMain>
+										<p className="element-title">Графический/Веб дизайнер — Insane Luv</p>
+										<p className="default-title">Период деятельности: 2022 Март — 2023 Сентябрь</p>
+									</ElementInfoMain>
+									<DesignSkillsContainer>
+										{DesignSkillsFirst.map(el => 
+											<SkillTagGreen>
+												<span>{el}</span>
+											</SkillTagGreen>
+										)}
+									</DesignSkillsContainer>
+									<p>Выполнял разноплановые дизайн задачи на заказ.<br/>
+										Вёл и продвигал свои соц. сети, посвященные деятельности, для привлечения клиентов.<br/><br/>
+
+										· Пик Discord: ~1500 участников.<br/>
+										· Пик Telegram: ~700 подписчиков.<br/>
+										· Занял призовое место в конкурсе дизайна мерча у популярного российского стримера Dmitry_Lixxx (1.7 млн подписчиков на Twitch).<br/>
+										· Создавал UI/UX сервиса для обучения нейронной сети Kandinsky от Сбер в ходе университетской практики.</p>
+								</ContainerElementInfo>		
+						</ContainerElement>
+						<ContainerElement>
 							<img src={TeleTribeLogo} alt="TeleTribe Logo" onClick={() => {window.open('https://www.teletribe.ru/');}}/>
-							<span className="default-font">Контакт-центр TeleTribe<br/>
-											Должность: Системный администратор<br/>
-											Период: 2024 Февраль - Настоящее время
-							</span>
-						</div>
+							<ContainerElementInfo>
+								<ElementInfoMain>
+									<span className="element-title">Системный администратор - TeleTribe</span>
+									<span className="default-title">Период деятельности: 2024 Февраль - Настоящее время</span>
+								</ElementInfoMain>		
+								<AdminSkillsContainer>
+								{AdminSkillsFirst.map(el => 
+									<SkillTagPurple>
+										<span>{el}</span>
+									</SkillTagPurple>
+								)}
+								</AdminSkillsContainer>
+								<p>Обслуживал и поддерживал работоспособность компьютерного оборудования в главном офисе контакт-центра.<br/>
+										Оказывал техническую поддержку сотрудникам офиса.<br/>
+										Вел закупки оборудования.<br/>
+										Организовывал рабочие места для новых сотрудников.<br/>
+										Работал с серверами.</p>
+							</ContainerElementInfo>				
+						</ContainerElement>
 					</ExperienceContainer>
 					<SplitLine></SplitLine>
+					<EducationContainer>
+					<span className="section-title">// Дополнительные навыки</span>
+						<ContainerElement>
+						<ContainerElementInfo>
+							<span className="prof-font">FrontEnd<br/><br/></span>
+							<DesignSkillsContainer>
+								{DevSkills.map(el => 
+									<SkillTagGrey>
+										<span>{el}</span>
+									</SkillTagGrey>
+								)}
+							</DesignSkillsContainer>
+						</ContainerElementInfo>		
+					</ContainerElement>
+					</EducationContainer>
+					<SplitLine></SplitLine>
 					<AboutContainer>
-						<span className="section-title">О себе</span>
-						<span className="default-font">&ensp;&ensp;Я творческий человек и люблю создавать что-то свое. Мой путь к FrontEnd разработке начинался с дизайна, которым я занимался несколько лет: изучал растровую и векторную графику. Позже пришел к изучению UI/UX дизайна, учился проектировать и создавать интерфейсы. Финальным этапом было изучение веб-разработки, чтобы самостоятельно верстать и реализовывать проекты.</span>
-						<ol>
-							<li>Знаю <span className="accent-font">HTML</span> и <span className="accent-font">CSS</span>, делаю адаптивную верстку, предпочитаю использовать <span className="accent-font">flex</span></li>
-							<li>Работаю с библиотекой <span className="accent-font">React</span></li>
-							<li>Всегда использую <span className="accent-font">TypeScript</span>, вместо <span className="accent-font">JavaScript</span>, как более хорошую практику</li>
-							<li>Для стилизации компонентов использую <span className="accent-font">Styled Components</span></li>
-							<li>Для роутинга использую <span className="accent-font">React Router Dom</span></li>
-							<li>Пользуюсь <span className="accent-font">Git</span></li>
-							<li>Для работы с проектом использую <span className="accent-font">Vite</span></li>
-						</ol>
+						<span className="section-title">// О себе</span>
+
+						<span className="default-font">
+						Я люблю <span className="accent-font">креативную деятельность</span>. Меня вдохновляет идея придумать что-то новое и нужное.<br/><br/>
+
+						Начинал свою деятельность с дизайна, где довелось впервые столкнуться с задачей <span className="accent-font">продвижения своих услуг и привлечения аудитории</span>, благодаря чему получил первичный опыт маркетинга.<br/><br/>
+
+						Долгое время был связан с IT сферой и двигался в этом направлении: получил <span className="accent-font">IT специальность</span>, устроился <span className="accent-font">Системным администратором</span> и изучал <span className="accent-font">FrontEnd разработку</span> на React. Запустил <span className="accent-font">свой личный сайт</span> с персональным доменом (<span className="accent-font"><a href="https://insaneluv.ru/" target="_blank">insaneluv.ru</a></span>) и интегрировал <span className="accent-font">Яндекс метрику</span>.<br/><br/>
+
+						На данный момент, изучаю работу <span className="accent-font">бизнеса</span> с упором на <span className="accent-font">маркетинг</span> и хочу развить свои навыки в этой области. Читаю учебную литературу и маркетинговые кейсы компаний, смотрю тематические видео материалы.<br/><br/>
+						</span>
 					</AboutContainer>
 				</InfoContainer>
 			</MainContainer>
@@ -107,10 +140,9 @@ const Home = () => {
 							{el.tag.map(ob => <div>{ob}</div>)}
 						</ProjectTags>
 						<ProjectBtns>
-							<ProjectGitBtn onClick={() => {window.open(el.git)}}>GitHub</ProjectGitBtn>
-							<PrototypeBtn onClick={() => {window.open(el.link)}}>Рабочий прототип</PrototypeBtn>
+							<ProjectGitBtn onClick={() => {window.open(el.link1)}}>{el.link1name}</ProjectGitBtn>
+							<PrototypeBtn onClick={() => {window.open(el.link2)}}>{el.link2name}</PrototypeBtn>
 						</ProjectBtns>
-
 					</ProjectBlock>
 				)}
 			</PortfolioContainer>
@@ -124,7 +156,7 @@ const SplitLine = styled.div`
 	width: 100%;
 	border-radius: 2px;
 	background-color: #303030;
-	margin: 50px 0;
+	margin: 0 0 40px 0;
 `;
 
 const HomeWrapper = styled.div`
@@ -182,24 +214,6 @@ const NameContainer = styled.div`
 	margin-bottom: 30px;
 `;
 
-const SkillsContainer = styled.div`
-	display: flex;
-	flex-direction: column;
-	border-left: 10px solid #21A049;
-	border-radius: 10px 0 0 10px;
-	padding: 10px 0px 10px 20px;
-	font-size: 20px;
-	margin-bottom: 30px;
-`;
-
-const DevSkillsContainer = styled.div`
-	margin-bottom: 20px;
-`;
-
-const AdditionalSkillsContainer = styled.div`
-	
-`;
-
 const SkillTagGreen = styled.div`
 	background-color: #21A049;
 	color: #202020;
@@ -211,10 +225,19 @@ const SkillTagGreen = styled.div`
 
 `;
 
-const SkillTagBlack = styled.div`
-	background-color: #202020;
-	border: 1px solid #21A049;
-	color: #21A049;
+const SkillTagPurple = styled.div`
+	background-color: #A93C91;
+	color: #202020;
+	border-radius: 16px;
+	padding: 5px 15px;
+	display:inline-block;
+	margin-right: 10px;
+	margin-bottom: 10px;
+`;
+
+const SkillTagGrey = styled.div`
+	background-color: #adacac;
+	color: #202020;
 	border-radius: 16px;
 	padding: 5px 15px;
 	display:inline-block;
@@ -228,20 +251,13 @@ const ContactsContainer = styled.div`
 	border-left: 10px solid #21A049;
 	border-radius: 10px 0 0 10px;
 	padding: 10px 0px 10px 20px;
+	margin-bottom: 50px;
 `;
 
 const EducationContainer = styled.div`
 	display: flex;
 	flex-direction: column;
-	div {
-		display: flex;
-		img {
-			align-self: flex-start;
-			margin-right: 30px;
-			width: 168px;
-			cursor: pointer;
-		}
-	}
+
 	@media (max-width: 600px) {
 		div {
 			flex-direction: column;
@@ -251,13 +267,34 @@ const EducationContainer = styled.div`
 			}
 		}
 	}
+`;
+
+const ContainerElement = styled.div`
+	display: flex;
+	width: 100%;
+	margin-bottom: 40px;
+		img {
+		align-self: flex-start;
+		margin-right: 30px;
+		width: 168px;
+		cursor: pointer;
+	}
+`;
+const ContainerElementInfo = styled.div`
+	display: flex;
+	flex-direction: column;
+`;
+const ElementInfoMain = styled.div`
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 20px;
 `;
 
 const ExperienceContainer = styled.div`
 	display: flex;
 	flex-direction: column;
 	div {
-		display: flex;
+
 		img {
 			align-self: flex-start;
 			margin-right: 30px;
@@ -274,6 +311,13 @@ const ExperienceContainer = styled.div`
 			}
 		}
 	}
+`;
+
+const DesignSkillsContainer = styled.div`
+	margin-bottom: 10px;
+`;
+const AdminSkillsContainer = styled.div`
+	margin-bottom: 10px;
 `;
 
 const AboutContainer = styled.div`
@@ -321,7 +365,9 @@ const ProjectBlock = styled.div`
 
 	/* background-color: #404040; */
 	img {
-		width: 100%;
+		object-fit: cover;
+		width: 400px;
+		height: 200px;
 		border-radius: 10px;
 		margin-bottom: 20px;
 	}
