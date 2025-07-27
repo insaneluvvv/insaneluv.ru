@@ -25,7 +25,7 @@ const Home = () => {
 						<span className="section-title">Контакты</span>
 						<span className="default-font">Telegram: <a href="https://t.me/insaneluvvv" target="_blank">@insaneluvvv</a> </span>
 						<span className="default-font">Email: <a href="mailto:lemeshev.artem@insaneluv.ru" target="_blank">lemeshev.artem@insaneluv.ru</a> </span>
-						<span className="default-font">Personal Site: <a href="https://insaneluv.ru/" target="_blank">insaneluv.ru</a> </span>
+						<span className="default-font">Site: <a href="https://insaneluv.ru/" target="_blank">insaneluv.ru</a> </span>
 					</ContactsContainer>
 					<SplitLine></SplitLine>
 					<EducationContainer>
@@ -366,8 +366,8 @@ const ProjectBlock = styled.div`
 	/* background-color: #404040; */
 	img {
 		object-fit: cover;
-		width: 400px;
-		height: 200px;
+		width: 100%;
+		max-height: 200px;
 		border-radius: 10px;
 		margin-bottom: 20px;
 	}
