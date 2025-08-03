@@ -23,6 +23,12 @@ export const AdminSkillsFirst : Array<string> = [
   `MS Office`,
   `1C`,
   `Тех. поддерржка`,
+  `Закупки`,
+]
+
+export const LangSkills : Array<string> = [
+  `Русский - родной`,
+  `Английский - B2`,
 ]
 
 export const DevSkills : Array<string> = [
@@ -36,4 +42,17 @@ export const DevSkills : Array<string> = [
   `Vite`,
   `Docker`,
   `Адаптивная верстка`,
+]
+
+export const MarSkills : Array<string> = [
+  `Продвижение бренда`,
+  `Маркетинговые исследования`,
+  `SMM`,
+  `SEO`,
+  `Яндекс метрика`
+]
+
+export const AISkills : Array<string> = [
+  `Чат-боты`,
+  `Text-to-Image`,
 ]

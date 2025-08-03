@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { DesignSkillsFirst, AdminSkillsFirst, DevSkills } from "../assets/data/SkillsList"
+import { DesignSkillsFirst, AdminSkillsFirst, LangSkills, MarSkills, DevSkills, AISkills } from "../assets/data/SkillsList"
 import initProject from "../assets/data/ProjectList";
 import Avatar from "./../assets/media/Avatar.png";
 import InsaneLuvLogo from "./../assets/media/InsaneLuv Logo.png";
@@ -60,11 +60,16 @@ const Home = () => {
 											</SkillTagGreen>
 										)}
 									</DesignSkillsContainer>
-									<p>Выполнял разноплановые дизайн задачи на заказ.<br/>
-										Вёл и продвигал свои соц. сети, посвященные деятельности, для привлечения клиентов.<br/><br/>
-
-										· Пик Discord: ~1500 участников.<br/>
-										· Пик Telegram: ~700 подписчиков.<br/>
+									<p>- Выполнял широкий спектр дизайн задач на фрилансе в сферах соц. сетей, турниров, брендинга и др.<br/>
+										- Со старта вел соц. сети, посвященные моей деятельности, для формирования аудитории и привлечения новых клиентов, благодаря чему параллельно знакомился с процессами маркетинга.<br/>
+										Основная клиентская база была из области киберспортивных турниров, на которую было нацелено продвижение.<br/>
+										Был проведен анализ рынка, на основе которого подбирались места и способы распространения услуг. Подобрана соц. сеть Discord (основная площадка организации турниров), как самая близкая к ЦА. Основными способами распространения с упором на сокращение затрат были: взаимный обмен ссылками с тематическими серверами, спонсирование турниров услугами дизайна взамен на спонсорские ссылки, приносящие стабильный прирост потенциально заинтересованной аудитории и другие бартерные партнерства.<br/><br/>
+										
+										Достижения:<br/>
+										· Более 150 выполненных работ.<br/>
+										· Более 50 клиентов.<br/>
+										· Пик Discord: 1500+ участников.<br/>
+										· Пик Telegram: 700+ подписчиков.<br/>
 										· Занял призовое место в конкурсе дизайна мерча у популярного российского стримера Dmitry_Lixxx (1.7 млн подписчиков на Twitch).<br/>
 										· Создавал UI/UX дизайн сервиса для обучения нейронной сети Kandinsky от Сбер в ходе университетской практики.</p>
 								</ContainerElementInfo>		
@@ -83,11 +88,10 @@ const Home = () => {
 									</SkillTagPurple>
 								)}
 								</AdminSkillsContainer>
-								<p>Обслуживал и поддерживал работоспособность компьютерного оборудования в главном офисе контакт-центра.<br/>
-										Оказывал техническую поддержку сотрудникам офиса.<br/>
-										Вел закупки оборудования.<br/>
-										Организовывал рабочие места для новых сотрудников.<br/>
-										Работал с серверами.</p>
+								<p>- Обслуживал и поддерживал работоспособность компьютерного оборудования в главном офисе контакт-центра.<br/>
+									- Единовременно обеспечивал полное техническое сопровождение 40+ сотрудников и организовывал рабочие места для новых.<br/>
+									- Управлял полным циклом закупок технического оборудования: от формирования ТЗ и выбора поставщиков до заключения договоров, логистики, приемки и контроля качества, действуя с акцентом на оптимизацию затрат.<br/>
+									- Работал с серверами и осуществлял выгрузку аудиозаписей для передачи заказчика.</p>
 							</ContainerElementInfo>				
 						</ContainerElement>
 					</ExperienceContainer>
@@ -96,9 +100,33 @@ const Home = () => {
 					<span className="section-title">// Дополнительные навыки</span>
 						<ContainerElement>
 						<ContainerElementInfo>
+							<span className="prof-font">Языки<br/><br/></span>
+							<DesignSkillsContainer>
+								{LangSkills.map(el => 
+									<SkillTagGrey>
+										<span>{el}</span>
+									</SkillTagGrey>
+								)}
+							</DesignSkillsContainer><span><br/></span>
+							<span className="prof-font">Маркетинг<br/><br/></span>
+							<DesignSkillsContainer>
+								{MarSkills.map(el => 
+									<SkillTagGrey>
+										<span>{el}</span>
+									</SkillTagGrey>
+								)}
+							</DesignSkillsContainer><span><br/></span>
 							<span className="prof-font">FrontEnd<br/><br/></span>
 							<DesignSkillsContainer>
 								{DevSkills.map(el => 
+									<SkillTagGrey>
+										<span>{el}</span>
+									</SkillTagGrey>
+								)}
+							</DesignSkillsContainer><span><br/></span>
+							<span className="prof-font">AI<br/><br/></span>
+							<DesignSkillsContainer>
+								{AISkills.map(el => 
 									<SkillTagGrey>
 										<span>{el}</span>
 									</SkillTagGrey>

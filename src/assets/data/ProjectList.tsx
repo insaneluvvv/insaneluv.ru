@@ -29,7 +29,7 @@ const initProject: Array<ProjectInt> = [
   },
   {
     id: 2,
-    type: "Пет проект",
+    type: "FrontEnd",
     tag: ["React", "TypeScript", "Styled Components", "React Router Dom", "firebase"],
     name: "Личный сайт",
     desc: "Первый проект, посвященный разработке личного сайта портфолио-резюме.",
