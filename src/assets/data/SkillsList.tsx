@@ -49,7 +49,8 @@ export const MarSkills : Array<string> = [
   `Маркетинговые исследования`,
   `SMM`,
   `SEO`,
-  `Яндекс метрика`
+  `Яндекс метрика`,
+  `Яндекс директ`
 ]
 
 export const AISkills : Array<string> = [
