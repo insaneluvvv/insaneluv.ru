@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 import { DesignSkillsFirst, AdminSkillsFirst, LangSkills, MarSkills, DevSkills, AISkills } from "../assets/data/SkillsList"
 import initProject from "../assets/data/ProjectList";
-import Avatar from "./../assets/media/Avatar.png";
+import Avatar from "./../assets/media/Avatar.jpg";
 import InsaneLuvLogo from "./../assets/media/InsaneLuv Logo.png";
 import MisisLogo from "./../assets/media/Misis Logo.svg";
 import TeleTribeLogo from "./../assets/media/Teletribe Logo.png";
