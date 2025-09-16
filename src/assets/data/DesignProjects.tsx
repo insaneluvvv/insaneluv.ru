@@ -1,4 +1,6 @@
-import InsaneLuvBanner from "./../media/portfolio/InsaneLuv_Banner.png";
+import Logofolio from "./../media/portfolio/design/logofolio.png";
+import Kandinsky from "./../media/portfolio/design/kandinsky.jpg";
+
 
 type ProjectInt = {
   id: number,
@@ -15,7 +17,7 @@ const initProject: Array<ProjectInt> = [
     tag: ["Графический дизайн", "Логотипы"],
     name: "Логофолио",
     desc: "Коллекция созданных логотипов.",
-    img: InsaneLuvBanner,
+    img: Logofolio,
     link: "logofolio",
   },
   {
@@ -23,7 +25,7 @@ const initProject: Array<ProjectInt> = [
     tag: ["React"],
     name: "Сервис длся обучения Kandinsky",
     desc: "Первый проект, посвященный разработке личного сайта портфолио-резюме.",
-    img: InsaneLuvBanner,
+    img: Kandinsky,
     link: "kandinsky",
   }
 ]

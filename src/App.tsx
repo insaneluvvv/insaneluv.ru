@@ -5,7 +5,10 @@ import Header from './components/Header'
 import Footer from './components/Footer'
 import Home from './pages/Home'
 import DesignPortfolio from "./pages/DesignPortfolio"
+import Logofolio from "./pages/DesPortItems/Logofolio"
+import Kandinsky from "./pages/DesPortItems/Kandinsky"
 import DevPortfolio from "./pages/DevPortfolio"
+import PersonalSite from "./pages/DevPortItems/PersonalSite"
 import PageNotFound from './pages/PageNotFound'
 
 
@@ -18,7 +21,10 @@ const App = () => {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/design-portfolio" element={<DesignPortfolio />} />
+              <Route path="/design-portfolio/logofolio" element={<Logofolio />} />
+              <Route path="/design-portfolio/kandinsky" element={<Kandinsky />} />
             <Route path="/dev-portfolio" element={<DevPortfolio />} />
+              <Route path="/dev-portfolio/personal-site" element={<PersonalSite />} />
             <Route path="*" element={<PageNotFound />} />
           </Routes>
         </MainWrapper>

@@ -6,6 +6,7 @@ import { NavLink } from 'react-router-dom';
 const DesignPortfolio = () => {
   return (
       <HomeWrapper>
+				<PortfolioTitle className="section-title">DESIGN PORTFOLIO</PortfolioTitle>
         <PortfolioContainer>
           {initProject.map(el => 
             <NavLink className="nav-link" to={el.link}>
@@ -30,6 +31,12 @@ const HomeWrapper = styled.div`
 	width: 80%;
 `;
 
+const PortfolioTitle = styled.div`
+	display: flex;
+	justify-content: center;
+	color: #21A049;
+`;
+
 const PortfolioContainer = styled.div`
 	display: flex;
 	justify-content: center;
@@ -48,7 +55,7 @@ const ProjectBlock = styled.div`
 	img {
 		object-fit: cover;
 		width: 100%;
-		max-height: 200px;
+		height: 200px;
 		border-radius: 10px;
 		margin-bottom: 20px;
 	}

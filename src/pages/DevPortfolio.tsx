@@ -7,6 +7,7 @@ import { NavLink } from 'react-router-dom';
 const DevPortfolio = () => {
   return (
       <HomeWrapper>
+				<PortfolioTitle className="section-title">DESIGN PORTFOLIO</PortfolioTitle>
         <PortfolioContainer>
           {initProject.map(el => 
             <NavLink className="nav-link" to={el.link}>
@@ -29,6 +30,12 @@ const DevPortfolio = () => {
 const HomeWrapper = styled.div`
 	margin: 0 10%;
 	width: 80%;
+`;
+
+const PortfolioTitle = styled.div`
+	display: flex;
+	justify-content: center;
+	color: #21A049;
 `;
 
 const PortfolioContainer = styled.div`

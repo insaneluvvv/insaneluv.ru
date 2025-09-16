@@ -6,8 +6,8 @@ import Avatar from "./../assets/media/Avatar.jpg";
 import InsaneLuvLogo from "./../assets/media/InsaneLuv Logo.png";
 import MisisLogo from "./../assets/media/Misis Logo.svg";
 import TeleTribeLogo from "./../assets/media/Teletribe Logo.png";
-import InsaneLuvDevBanner from "./../assets/media/portfolio/InsaneLuvDev_Banner.png";
-import InsaneLuvBanner from "./../assets/media/portfolio/InsaneLuv_Banner.png";
+import ProjectDevBanner from "./../assets/media/portfolio/ProjectDevBanner.png";
+import ProjectDesBanner from "./../assets/media/portfolio/ProjectDesBanner.png";
 
 
 const Home = () => {
@@ -161,7 +161,7 @@ const Home = () => {
 				<NavLink className="nav-link" to="/design-portfolio">
 				<ProjectBlock>
 					<ProjectName>Design</ProjectName>
-					<img src={InsaneLuvBanner} alt={InsaneLuvBanner} />
+					<img src={ProjectDesBanner} alt={ProjectDesBanner} />
 					<ProjectTags>
 						<div>Графический дизайн</div>
 						<div>UI/UX</div>
@@ -172,7 +172,7 @@ const Home = () => {
 				<NavLink className="nav-link" to="/dev-portfolio">
 				<ProjectBlock>
 					<ProjectName>Development</ProjectName>
-					<img src={InsaneLuvDevBanner} alt={InsaneLuvDevBanner} />
+					<img src={ProjectDevBanner} alt={ProjectDevBanner} />
 					<ProjectTags>
 						<div>FrontEnd</div>
 						<div>React</div>
@@ -401,7 +401,7 @@ const ProjectBlock = styled.div`
 	img {
 		object-fit: cover;
 		width: 100%;
-		max-height: 200px;
+		height: 200px;
 		border-radius: 10px;
 		margin-bottom: 20px;
 	}
