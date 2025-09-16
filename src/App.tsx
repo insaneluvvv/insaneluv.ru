@@ -4,6 +4,8 @@ import styled from "styled-components"
 import Header from './components/Header'
 import Footer from './components/Footer'
 import Home from './pages/Home'
+import DesignPortfolio from "./pages/DesignPortfolio"
+import DevPortfolio from "./pages/DevPortfolio"
 import PageNotFound from './pages/PageNotFound'
 
 
@@ -15,6 +17,8 @@ const App = () => {
         <MainWrapper>
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/design-portfolio" element={<DesignPortfolio />} />
+            <Route path="/dev-portfolio" element={<DevPortfolio />} />
             <Route path="*" element={<PageNotFound />} />
           </Routes>
         </MainWrapper>

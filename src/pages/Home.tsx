@@ -1,11 +1,13 @@
 import styled from "styled-components";
+import { NavLink } from "react-router-dom";
 
 import { DesignSkillsFirst, AdminSkillsFirst, LangSkills, MarSkills, DevSkills, AISkills } from "../assets/data/SkillsList"
-import initProject from "../assets/data/ProjectList";
 import Avatar from "./../assets/media/Avatar.jpg";
 import InsaneLuvLogo from "./../assets/media/InsaneLuv Logo.png";
 import MisisLogo from "./../assets/media/Misis Logo.svg";
 import TeleTribeLogo from "./../assets/media/Teletribe Logo.png";
+import InsaneLuvDevBanner from "./../assets/media/portfolio/InsaneLuvDev_Banner.png";
+import InsaneLuvBanner from "./../assets/media/portfolio/InsaneLuv_Banner.png";
 
 
 const Home = () => {
@@ -156,23 +158,28 @@ const Home = () => {
 				<span className="big-title">///</span>
 			</ProjectSplit>
 			<PortfolioContainer>
-				{initProject.map(el => 
-					<ProjectBlock>
-						<ProjectName>
-							<span className="section-title">{el.name}</span>
-							<ProjectType><p>{el.type}</p></ProjectType>
-						</ProjectName>
-						<img src={el.img} alt={el.name} />
-						<ProjectDesc>{el.desc}</ProjectDesc>
-						<ProjectTags>
-							{el.tag.map(ob => <div>{ob}</div>)}
-						</ProjectTags>
-						<ProjectBtns>
-							<ProjectGitBtn onClick={() => {window.open(el.link1)}}>{el.link1name}</ProjectGitBtn>
-							<PrototypeBtn onClick={() => {window.open(el.link2)}}>{el.link2name}</PrototypeBtn>
-						</ProjectBtns>
-					</ProjectBlock>
-				)}
+				<NavLink className="nav-link" to="/design-portfolio">
+				<ProjectBlock>
+					<ProjectName>Design</ProjectName>
+					<img src={InsaneLuvBanner} alt={InsaneLuvBanner} />
+					<ProjectTags>
+						<div>Графический дизайн</div>
+						<div>UI/UX</div>
+					</ProjectTags>
+					<ProjectDesc>Портфолио дизайнерской деятельности.</ProjectDesc>
+				</ProjectBlock>
+				</NavLink>
+				<NavLink className="nav-link" to="/dev-portfolio">
+				<ProjectBlock>
+					<ProjectName>Development</ProjectName>
+					<img src={InsaneLuvDevBanner} alt={InsaneLuvDevBanner} />
+					<ProjectTags>
+						<div>FrontEnd</div>
+						<div>React</div>
+					</ProjectTags>
+					<ProjectDesc>Результаты изучения FrontEnd разработки.</ProjectDesc>
+				</ProjectBlock>
+				</NavLink>
 			</PortfolioContainer>
 
 		</HomeWrapper>
@@ -388,8 +395,7 @@ const PortfolioContainer = styled.div`
 const ProjectBlock = styled.div`
 	display: flex;
 	flex-direction: column;
-	width: 400px;
-	max-width: 100%;
+	padding: 20px 20px;
 
 	/* background-color: #404040; */
 	img {
@@ -402,85 +408,39 @@ const ProjectBlock = styled.div`
 `;
 
 const ProjectName = styled.div`
-	display: inline-block;
 	display: flex;
-	align-items: center;
-	height: 30px;
 	margin-bottom: 20px;
-		span {
-		color: #21A049;
-		margin-bottom: 5px;
-		margin-right: 20px;
-	}
+  color: #21A049;
+  font-family: "Rubik", serif;
+  font-weight: 700;
+  font-size: 24px;
+
 	@media (max-width: 600px) {
 		flex-direction: column;
-		align-items: start;
-		height: 60px;
 	}
-`;
-
-const ProjectType = styled.div`
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	background-color: #6d9189;
-  color: #202020;
-  border-radius: 16px;
-	height: 28px;
-	padding-left: 20px;
-	padding-right: 20px;
-`;
-
-const ProjectDesc = styled.span`
-	margin-bottom: 20px;
-	min-height: 66px;
 `;
 
 const ProjectTags = styled.div`
 	display: flex;
 	flex-wrap: wrap;
-	margin-bottom: 20px;
+	margin-bottom: 5px;
 	div {
-	font-size: 16px;
-		background-color: #202020;
+		font-size: 16px;
+		background-color: 0;
 		color: #6d9189;
 		border: 2px solid #6d9189;
 		padding: 2px 8px;
 		margin-right: 5px;
-		margin-bottom: 10px;
 		border-radius: 15px;
+		margin-bottom: 5px;
 	}
 `;
 
-const ProjectBtns = styled.div`
-	display: flex;
+const ProjectDesc = styled.span`
+	color: #9e9e9e;
 `;
 
-const ProjectGitBtn = styled.button`
-	border: 0;
-	padding: 8px 20px;
-	border-radius: 10px;
-	background-color: #21A049;
-	color: #303030;
-	margin-right: 10px;
-	cursor: pointer;
-	transition: 200ms ease;
-	&:hover {
-		background-color: #1b7e39;
-	}
-`;
 
-const PrototypeBtn = styled.button`
-	border: 0;
-	padding: 8px 20px;
-	border-radius: 10px;
-	background-color: #21A049;
-	color: #303030;
-	cursor: pointer;
-	transition: 200ms ease;
-	&:hover {
-		background-color: #1b7e39;
-	}
-`;
+
 
 export default Home;
