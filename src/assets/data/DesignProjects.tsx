@@ -3,7 +3,7 @@ import Kandinsky from "./../media/portfolio/design/kandinsky.jpg";
 import StudJob from "./../media/portfolio/design/studjob.png";
 import crw from "./../media/portfolio/design/crw.png";
 import tournaments from "./../media/portfolio/design/tournaments.png";
-import test from "./../media/portfolio/design/test.jpg";
+//import test from "./../media/portfolio/design/test.jpg";
 
 
 
