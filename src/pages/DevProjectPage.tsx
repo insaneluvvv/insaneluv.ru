@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+import BackToTop from "../components/BackToTopBtn";
+
 import initProject from "../assets/data/DevProjects";
 import { NavLink } from 'react-router-dom';
 
@@ -21,6 +23,7 @@ const DevProject = () => {
             </NavLink>
           )}
         </PortfolioContainer>
+				<BackToTop />
       </HomeWrapper>
 
   )
