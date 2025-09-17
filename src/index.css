@@ -12,7 +12,17 @@
 body {
   background-color: #202020;
   color: #c5c5c5;
-  
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("./assets/media/noise.png") repeat;
+  opacity: 0.80;  /* регулируешь интенсивность шума */
+  pointer-events: none; /* чтобы не мешало кликам */
+  z-index: -1;
 }
 
 a {
