@@ -13,8 +13,6 @@ import MisisLogo from "./../assets/media/Misis Logo.svg";
 import TeleTribeLogo from "./../assets/media/Teletribe Logo.png";
 import ProjectDevBanner from "./../assets/media/portfolio/ProjectDevBanner.png";
 import ProjectDesBanner from "./../assets/media/portfolio/ProjectDesBanner.png";
-import { BiAlignJustify } from "react-icons/bi";
-
 
 const Home = () => {
 
