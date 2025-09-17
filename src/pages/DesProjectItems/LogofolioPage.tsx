@@ -31,7 +31,7 @@ const Logofolio = () => {
         <span className="section-title" onClick={() => navigate(-1)}>DESIGN PORTFOLIO </span>
         <p className="section-title">/ Логофолио </p>
       </PortfolioTitle>      
-      <PortfolioDesc className="default-font">Здесь собраны логотипы, которые мне довелось создать в ходе своей деятельности.</PortfolioDesc>
+      <PortfolioDesc className="default-font">Здесь собрана коллекция ранее сделанных логотипов.</PortfolioDesc>
       <ItemsList>
         {sortedImages.map(({ path, url }) => {
           const name = path.split("/").pop();

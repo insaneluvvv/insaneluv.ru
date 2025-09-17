@@ -191,7 +191,7 @@ const Home = () => {
 						<div>FrontEnd</div>
 						<div>React</div>
 					</ProjectTags>
-					<ProjectDesc>Результаты изучения FrontEnd разработки.</ProjectDesc>
+					<ProjectDesc>FrontEnd разработка.</ProjectDesc>
 				</ProjectBlock>
 				</NavLink>
 				

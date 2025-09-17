@@ -20,7 +20,7 @@ body::before {
   position: absolute;
   inset: 0;
   background: url("./assets/media/noise.png") repeat;
-  opacity: 0.80;  /* регулируешь интенсивность шума */
+  opacity: 0.60;  /* регулируешь интенсивность шума */
   pointer-events: none; /* чтобы не мешало кликам */
   z-index: -1;
 }

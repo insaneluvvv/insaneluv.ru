@@ -2,8 +2,8 @@ import Logofolio from "./../media/portfolio/design/logofolio.png";
 import Kandinsky from "./../media/portfolio/design/kandinsky.jpg";
 import StudJob from "./../media/portfolio/design/studjob.png";
 import crw from "./../media/portfolio/design/crw.png";
-import tournamentgrid from "./../media/portfolio/design/tournamentgrid.jpg";
-import tournamenttables from "./../media/portfolio/design/tournamenttables.jpg";
+import tournaments from "./../media/portfolio/design/tournaments.png";
+import test from "./../media/portfolio/design/test.jpg";
 
 
 
@@ -51,20 +51,20 @@ const initProject: Array<ProjectInt> = [
   },
   {
     id: 5,
-    tag: ["Графический дизайн", "Турнир"],
-    name: "Турнирные сетки",
-    desc: "Коллекция турнирных сеток.",
-    img: tournamentgrid,
-    link: "tournament-grid",
+    tag: ["Графический дизайн", "Турниры", "Таблицы", "Сетки", "Ростеры"],
+    name: "Турниры",
+    desc: "Работы связанные с турнирами.",
+    img: tournaments,
+    link: "tournaments",
   },
-  {
-    id: 6,
-    tag: ["Графический дизайн", "Турнир"],
-    name: "Турнирные таблицы",
-    desc: "Коллекция турнирных таблиц.",
-    img: tournamenttables,
-    link: "tournament-tables",
-  },
+  // {
+  //   id: 6,
+  //   tag: ["Графический дизайн", "Турнир"],
+  //   name: "Турнирные таблицы",
+  //   desc: "Коллекция турнирных таблиц.",
+  //   img: test,
+  //   link: "test",
+  // },
 ]
 
 export default initProject;

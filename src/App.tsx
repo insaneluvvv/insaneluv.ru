@@ -9,8 +9,8 @@ import Logofolio from "./pages/DesProjectItems/LogofolioPage"
 import Kandinsky from "./pages/DesProjectItems/KandinskyPage"
 import StudJob from "./pages/DesProjectItems/StudJobPage"
 import CourseResearchWork from "./pages/DesProjectItems/CourseResearchWorkPage"
-import TournamentGrid from "./pages/DesProjectItems/TournamentGridPage"
-import TournamentTables from "./pages/DesProjectItems/TournamentTablesPage"
+import Tournaments from "./pages/DesProjectItems/TournamentsPage"
+import Test from "./pages/DesProjectItems/TestPage"
 import DevProject from "./pages/DevProjectPage"
 import PersonalSite from "./pages/DevProjectItems/PersonalSitePage"
 import PageNotFound from './pages/PageNotFound'
@@ -29,8 +29,8 @@ const App = () => {
               <Route path="/design-portfolio/kandinsky" element={<Kandinsky />} />
               <Route path="/design-portfolio/studjob" element={<StudJob />} />
               <Route path="/design-portfolio/course-research-work" element={<CourseResearchWork />} />
-              <Route path="/design-portfolio/tournament-grid" element={<TournamentGrid />} />
-              <Route path="/design-portfolio/tournament-tables" element={<TournamentTables />} />
+              <Route path="/design-portfolio/tournaments" element={<Tournaments />} />
+              <Route path="/design-portfolio/test" element={<Test />} />
             <Route path="/dev-portfolio" element={<DevProject />} />
               <Route path="/dev-portfolio/personal-site" element={<PersonalSite />} />
             <Route path="*" element={<PageNotFound />} />
