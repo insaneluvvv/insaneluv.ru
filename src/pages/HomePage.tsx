@@ -262,7 +262,7 @@ const ToProjectBtn = styled.div`
 	justify-content: center;
 	align-items: center;
 	background-color: #21A049;
-	color: #202020;
+	color: #151515;
 	width: 100%;
 	padding: 8px 0;
 	border-radius: 6px;
@@ -292,7 +292,7 @@ const NameContainer = styled.div`
 
 const SkillTagGreen = styled.div`
 	background-color: #21A049;
-	color: #202020;
+	color: #151515;
 	border-radius: 16px;
 	padding: 5px 15px;
 	display:inline-block;
@@ -303,7 +303,7 @@ const SkillTagGreen = styled.div`
 
 const SkillTagPurple = styled.div`
 	background-color: #A93C91;
-	color: #202020;
+	color: #151515;
 	border-radius: 16px;
 	padding: 5px 15px;
 	display:inline-block;
@@ -313,7 +313,7 @@ const SkillTagPurple = styled.div`
 
 const SkillTagGrey = styled.div`
 	background-color: #adacac;
-	color: #202020;
+	color: #151515;
 	border-radius: 16px;
 	padding: 5px 15px;
 	display:inline-block;
