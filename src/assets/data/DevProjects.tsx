@@ -17,14 +17,6 @@ const initProject: Array<ProjectInt> = [
     desc: "Первый проект, посвященный разработке личного сайта портфолио-резюме.",
     img: PersonalSite,
     link: "personal-site",
-  },
-  {
-    id: 2,
-    tag: ["React", "TypeScript", "Styled Components", "React Router Dom", "firebase"],
-    name: "Личный сайт",
-    desc: "Первый проект, посвященный разработке личного сайта портфолио-резюме.",
-    img: PersonalSite,
-    link: "personal-site",
   }
 ]
 

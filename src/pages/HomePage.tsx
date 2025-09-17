@@ -1,5 +1,10 @@
 import styled from "styled-components";
+import { useRef } from "react";
 import { NavLink } from "react-router-dom";
+
+import { MdOutlineKeyboardDoubleArrowDown } from "react-icons/md";
+
+import BackToTop from "../components/BackToTopBtn";
 
 import { DesignSkillsFirst, AdminSkillsFirst, LangSkills, MarSkills, DevSkills, AISkills } from "../assets/data/SkillsList"
 import Avatar from "./../assets/media/Avatar.jpg";
@@ -8,15 +13,26 @@ import MisisLogo from "./../assets/media/Misis Logo.svg";
 import TeleTribeLogo from "./../assets/media/Teletribe Logo.png";
 import ProjectDevBanner from "./../assets/media/portfolio/ProjectDevBanner.png";
 import ProjectDesBanner from "./../assets/media/portfolio/ProjectDesBanner.png";
+import { BiAlignJustify } from "react-icons/bi";
 
 
 const Home = () => {
+
+	const projectsRef = useRef<HTMLDivElement>(null); // Кнопка якорь к проктам
+
+	const scrollToProjects = () => {
+			projectsRef.current?.scrollIntoView({ behavior: "smooth" });
+	}
+
 	return ( 
 		<HomeWrapper>
 			<MainContainer>
 				<AvatarContainer>
 					<img className="avatar" src={Avatar} alt="Avatar" />
 					<img className="logo" src={InsaneLuvLogo} alt="InsaneLuv Logo" />
+					<ToProjectBtn onClick={scrollToProjects}>
+						<MdOutlineKeyboardDoubleArrowDown size={24} color="#202020"/> К ПРОЕКТАМ <MdOutlineKeyboardDoubleArrowDown size={24} color="#202020"/>
+					</ToProjectBtn>
 				</AvatarContainer>
 				<InfoContainer>
 					<NameContainer>
@@ -153,12 +169,12 @@ const Home = () => {
 					</AboutContainer>
 				</InfoContainer>
 			</MainContainer>
-			<ProjectSplit>
+			<ProjectSplit ref={projectsRef}>
 				<span className="big-title">Проекты</span>
 				<span className="big-title">///</span>
 			</ProjectSplit>
-			<PortfolioContainer>
-				<NavLink className="nav-link" to="/design-portfolio">
+			<ProjectContainer>
+				<NavLink className="nav-link" to="/design-portfolio" onClick={() => {window.scrollTo({ top: 0, behavior: "instant" });}}>
 				<ProjectBlock>
 					<ProjectName>Design</ProjectName>
 					<img src={ProjectDesBanner} alt={ProjectDesBanner} />
@@ -169,7 +185,7 @@ const Home = () => {
 					<ProjectDesc>Портфолио дизайнерской деятельности.</ProjectDesc>
 				</ProjectBlock>
 				</NavLink>
-				<NavLink className="nav-link" to="/dev-portfolio">
+				<NavLink className="nav-link" to="/dev-portfolio" onClick={() => {window.scrollTo({ top: 0, behavior: "instant" });}}>
 				<ProjectBlock>
 					<ProjectName>Development</ProjectName>
 					<img src={ProjectDevBanner} alt={ProjectDevBanner} />
@@ -180,7 +196,10 @@ const Home = () => {
 					<ProjectDesc>Результаты изучения FrontEnd разработки.</ProjectDesc>
 				</ProjectBlock>
 				</NavLink>
-			</PortfolioContainer>
+				
+			</ProjectContainer>
+
+			<BackToTop />
 
 		</HomeWrapper>
 	 );
@@ -198,6 +217,7 @@ const HomeWrapper = styled.div`
 	margin: 0 10%;
 	width: 80%;
 `;
+
 
 const MainContainer = styled.div`
 	 display: flex;
@@ -217,15 +237,17 @@ const AvatarContainer = styled.div`
 	margin-right: 80px;
 	@media (max-width: 1200px) {
 		margin-right: 0px;
+		width: 250px;
+		
 	}
 	@media (max-width: 600px) {
-		width: 150px;
+		width: 200px;
 	}
 	.avatar {
 		min-width: 200px;
 		width: 100%;
 		border-radius: 15px;
-		box-shadow: 2px 3px 5px black;
+		box-shadow: 0px 0px 5px 4px black;
 	}
 	.logo {
 		min-width: 125px;
@@ -233,6 +255,27 @@ const AvatarContainer = styled.div`
 		position:relative;
 		top: -50px;
 		left: 30px;
+	}
+`;
+
+const ToProjectBtn = styled.div`
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #21A049;
+	color: #202020;
+	width: 100%;
+	padding: 8px 0;
+	border-radius: 6px;
+	gap: 4px;
+	margin-bottom: 10px;
+	position:relative;
+	top: -30px;
+	transition: 200ms ease;
+	&:hover {
+		background-color: #1b7e39;
+		box-shadow: 0px 0px 5px 4px black;
 	}
 `;
 
@@ -379,12 +422,11 @@ const ProjectSplit = styled.div`
 		font-family: "Unbounded", serif;
 		font-weight: 700;
 		font-size: 30px;
-		margin-bottom: 5px;
 		color: #202020;
 	}
 `;
 
-const PortfolioContainer = styled.div`
+const ProjectContainer = styled.div`
 	display: flex;
 	justify-content: center;
 	flex-wrap: wrap;

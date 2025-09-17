@@ -1,16 +1,15 @@
-import React from 'react'
 import styled from "styled-components";
 
 import initProject from "../assets/data/DevProjects";
 import { NavLink } from 'react-router-dom';
 
-const DevPortfolio = () => {
+const DevProject = () => {
   return (
       <HomeWrapper>
-				<PortfolioTitle className="section-title">DESIGN PORTFOLIO</PortfolioTitle>
+				<PortfolioTitle className="section-title">DEVELOPMENT PORTFOLIO</PortfolioTitle>
         <PortfolioContainer>
           {initProject.map(el => 
-            <NavLink className="nav-link" to={el.link}>
+            <NavLink className="nav-link" to={el.link} onClick={() => {window.scrollTo({ top: 0, behavior: "instant" });}}>
               <ProjectBlock>
                 <ProjectName>{el.name}</ProjectName>
                 <img src={el.img} alt={el.name} />
@@ -95,4 +94,4 @@ const ProjectDesc = styled.span`
 	color: #9e9e9e;
 `;
 
-export default DevPortfolio
+export default DevProject

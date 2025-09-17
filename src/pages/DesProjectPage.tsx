@@ -7,9 +7,10 @@ const DesignPortfolio = () => {
   return (
       <HomeWrapper>
 				<PortfolioTitle className="section-title">DESIGN PORTFOLIO</PortfolioTitle>
+				
         <PortfolioContainer>
           {initProject.map(el => 
-            <NavLink className="nav-link" to={el.link}>
+            <NavLink className="nav-link" to={el.link} onClick={() => {window.scrollTo({ top: 0, behavior: "instant" });}}>
               <ProjectBlock>
                 <ProjectName>{el.name}</ProjectName>
                 <img src={el.img} alt={el.name} />
