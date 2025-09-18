@@ -105,7 +105,7 @@ const Home = () => {
 								<img src={InsaneLuvLogo} alt="InsaneLuv Logo" onClick={() => {window.open('https://insaneluv.ru/');}}/>
 								<ContainerElementInfo>
 									<ElementInfoMain>
-										<p className="element-title">Графический/Веб дизайнер — Insane Luv</p>
+										<p className="element-title">Графический/Веб дизайнер — Insane Luv (Фриланс)</p>
 										<p className="default-title">Период деятельности: 2022 Март — Настоящее время</p> <p>{expCurrent1 && ` (${expCurrent1})`}</p>
 									</ElementInfoMain>
 									<DesignSkillsContainer>
