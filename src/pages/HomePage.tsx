@@ -16,11 +16,50 @@ import ProjectDesBanner from "./../assets/media/portfolio/ProjectDesBanner.png";
 
 const Home = () => {
 
-	const projectsRef = useRef<HTMLDivElement>(null); // Кнопка якорь к проктам
+	// Кнопка якорь к проектам
+	const projectsRef = useRef<HTMLDivElement>(null);
 
 	const scrollToProjects = () => {
 			projectsRef.current?.scrollIntoView({ behavior: "smooth" });
 	}
+
+	//Подсчет опыта
+	// утилита для правильных окончаний
+	const pluralize = (num: number, one: string, few: string, many: string) => {
+		const mod10 = num % 10;
+		const mod100 = num % 100;
+
+		if (mod10 === 1 && mod100 !== 11) return `${num} ${one}`;
+		if (mod10 >= 2 && mod10 <= 4 && (mod100 < 10 || mod100 >= 20)) return `${num} ${few}`;
+		return `${num} ${many}`;
+	};
+
+	const getExperience = (startDate: Date, endDate?: Date): string => {
+		const now = endDate ?? new Date();
+		let years = now.getFullYear() - startDate.getFullYear();
+		let months = now.getMonth() - startDate.getMonth();
+
+		if (months < 0) {
+			years -= 1;
+			months += 12;
+		}
+
+		const yearsStr = years > 0 ? pluralize(years, "год", "года", "лет") : "";
+		const monthsStr = months > 0 ? pluralize(months, "месяц", "месяца", "месяцев") : "";
+
+		return [yearsStr, monthsStr].filter(Boolean).join(" ");
+	};
+
+	// (месяцы с 0 в JS)
+	// const startDate = new Date(2022, 2); // март 2022 (пример начальной даты)
+	// const endDate = new Date(2023, 7);   // август 2023 (пример конечной даты)
+	// const expCurrent = getExperience(startDate); // Пример вывода до настоящего времени
+	// const expEnded = getExperience(startDate, endDate); // Пример вывода до указанной даты
+
+	const startDate1 = new Date(2022, 2); // Дизайн
+	const expCurrent1 = getExperience(startDate1); // Вывод Дизайн
+	const startDate2 = new Date(2024, 1);  // TeleTribe
+	const expCurrent2 = getExperience(startDate2); // Вывод TeleTribe
 
 	return ( 
 		<HomeWrapper>
@@ -67,7 +106,7 @@ const Home = () => {
 								<ContainerElementInfo>
 									<ElementInfoMain>
 										<p className="element-title">Графический/Веб дизайнер — Insane Luv</p>
-										<p className="default-title">Период деятельности: 2022 Март — 2023 Сентябрь</p>
+										<p className="default-title">Период деятельности: 2022 Март — Настоящее время</p> <p>{expCurrent1 && ` (${expCurrent1})`}</p>
 									</ElementInfoMain>
 									<DesignSkillsContainer>
 										{DesignSkillsFirst.map(el => 
@@ -76,12 +115,13 @@ const Home = () => {
 											</SkillTagGreen>
 										)}
 									</DesignSkillsContainer>
-									<p>- Выполнял широкий спектр дизайн задач на фрилансе в сферах соц. сетей, турниров, брендинга и др.<br/>
-										- Со старта вел соц. сети, посвященные моей деятельности, для формирования аудитории и привлечения новых клиентов, благодаря чему параллельно знакомился с процессами маркетинга.<br/>
-										Основная клиентская база была из области киберспортивных турниров, на которую было нацелено продвижение.<br/>
+									<p>Ключевые задачи:<br/>
+										- Разрабатывал дизайн для клиентов на фрилансе в сферах соц. сетей, турниров, брендинга и др.<br/>
+										- Со старта вел соц. сети, посвященные моей деятельности, для формирования аудитории и привлечения новых клиентов, благодаря чему параллельно знакомился с процессами маркетинга и развития личного бренда.<br/>
+										- Основная клиентская база была из области киберспортивных турниров, на которую было нацелено продвижение.<br/>
 										Был проведен анализ рынка, на основе которого подбирались места и способы распространения услуг. Подобрана соц. сеть Discord (основная площадка организации турниров), как самая близкая к ЦА. Основными способами распространения с упором на сокращение затрат были: взаимный обмен ссылками с тематическими серверами, спонсирование турниров услугами дизайна взамен на спонсорские ссылки, приносящие стабильный прирост потенциально заинтересованной аудитории и другие бартерные партнерства.<br/><br/>
 										
-										Достижения:<br/>
+										Ключевые достижения:<br/>
 										· Более 150 выполненных работ.<br/>
 										· Более 50 клиентов.<br/>
 										· Пик Discord: 1500+ участников.<br/>
@@ -94,8 +134,8 @@ const Home = () => {
 							<img src={TeleTribeLogo} alt="TeleTribe Logo" onClick={() => {window.open('https://www.teletribe.ru/');}}/>
 							<ContainerElementInfo>
 								<ElementInfoMain>
-									<span className="element-title">Системный администратор - TeleTribe</span>
-									<span className="default-title">Период деятельности: 2024 Февраль - Настоящее время</span>
+									<p className="element-title">Системный администратор - TeleTribe</p>
+									<p className="default-title">Период деятельности: 2024 Февраль - Настоящее время </p><p>{expCurrent2 && ` (${expCurrent2})`}</p>
 								</ElementInfoMain>		
 								<AdminSkillsContainer>
 								{AdminSkillsFirst.map(el => 
@@ -104,10 +144,15 @@ const Home = () => {
 									</SkillTagPurple>
 								)}
 								</AdminSkillsContainer>
-								<p>- Обслуживал и поддерживал работоспособность компьютерного оборудования в главном офисе контакт-центра.<br/>
+								<p>Ключевые задачи:<br/>
+									- Обслуживал и поддерживал работоспособность компьютерного оборудования в главном офисе контакт-центра.<br/>
 									- Единовременно обеспечивал полное техническое сопровождение 40+ сотрудников и организовывал рабочие места для новых.<br/>
 									- Управлял полным циклом закупок технического оборудования: от формирования ТЗ и выбора поставщиков до заключения договоров, логистики, приемки и контроля качества, действуя с акцентом на оптимизацию затрат и вел соответствующий документооборот.<br/>
-									- Работал с серверами и осуществлял выгрузку аудиозаписей для передачи заказчика.</p>
+									- Работал с серверами и осуществлял выгрузку аудиозаписей для передачи заказчика.<br/><br/>
+
+									Ключевые достижения:<br/>
+									- Этот опыт позволил глубоко понять внутренние бизнес-процессы.<br/>
+									- Развил навыки работы с клиентами и решения проблем.</p>
 							</ContainerElementInfo>				
 						</ContainerElement>
 					</ExperienceContainer>
@@ -201,7 +246,8 @@ const Home = () => {
 
 		</HomeWrapper>
 	 );
-}
+};
+
 
 const SplitLine = styled.div`
 	height: 4px;
