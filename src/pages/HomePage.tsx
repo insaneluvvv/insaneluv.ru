@@ -90,7 +90,7 @@ const Home = () => {
 								<ContainerElementInfo>
 									<ElementInfoMain>
 										<p className="element-title">Университет науки и технологий МИСИС</p>
-										<p className="default-title">Период обучения: 2020 - 2024 гг.</p>
+										<p className="default-font">Период обучения: 2020 - 2024 гг.</p>
 									</ElementInfoMain>
 									<span>Специальность: Информационные системы и технологии<br/>
 									Степень: Бакалавр<br/>
@@ -106,7 +106,7 @@ const Home = () => {
 								<ContainerElementInfo>
 									<ElementInfoMain>
 										<p className="element-title">Графический/Веб дизайнер — Insane Luv (Фриланс)</p>
-										<p className="default-title">Период деятельности: 2022 Март — Настоящее время</p> <p>{expCurrent1 && ` (${expCurrent1})`}</p>
+										<p className="default-font">Период деятельности: 2022 Март — Настоящее время</p> <p>{expCurrent1 && ` (${expCurrent1})`}</p>
 									</ElementInfoMain>
 									<DesignSkillsContainer>
 										{DesignSkillsFirst.map(el => 
@@ -115,7 +115,7 @@ const Home = () => {
 											</SkillTagGreen>
 										)}
 									</DesignSkillsContainer>
-									<p>Ключевые задачи:<br/>
+									<p className="default-font">Ключевые задачи:<br/>
 										- Разрабатывал дизайн для клиентов на фрилансе в сферах соц. сетей, турниров, брендинга и др.<br/>
 										- Со старта вел соц. сети, посвященные моей деятельности, для формирования аудитории и привлечения новых клиентов, благодаря чему параллельно знакомился с процессами маркетинга и развития личного бренда.<br/>
 										- Основная клиентская база была из области киберспортивных турниров, на которую было нацелено продвижение.<br/>
@@ -135,7 +135,7 @@ const Home = () => {
 							<ContainerElementInfo>
 								<ElementInfoMain>
 									<p className="element-title">Системный администратор - TeleTribe</p>
-									<p className="default-title">Период деятельности: 2024 Февраль - Настоящее время </p><p>{expCurrent2 && ` (${expCurrent2})`}</p>
+									<p className="default-font">Период деятельности: 2024 Февраль - Настоящее время </p><p>{expCurrent2 && ` (${expCurrent2})`}</p>
 								</ElementInfoMain>		
 								<AdminSkillsContainer>
 								{AdminSkillsFirst.map(el => 
@@ -144,7 +144,7 @@ const Home = () => {
 									</SkillTagPurple>
 								)}
 								</AdminSkillsContainer>
-								<p>Ключевые задачи:<br/>
+								<p className="default-font">Ключевые задачи:<br/>
 									- Обслуживал и поддерживал работоспособность компьютерного оборудования в главном офисе контакт-центра.<br/>
 									- Единовременно обеспечивал полное техническое сопровождение 40+ сотрудников и организовывал рабочие места для новых.<br/>
 									- Управлял полным циклом закупок технического оборудования: от формирования ТЗ и выбора поставщиков до заключения договоров, логистики, приемки и контроля качества, действуя с акцентом на оптимизацию затрат и вел соответствующий документооборот.<br/>
@@ -203,11 +203,10 @@ const Home = () => {
 						<span className="default-font">
 						Я люблю <span className="accent-font">креативную деятельность</span>. Меня вдохновляет идея придумать что-то новое и нужное.<br/><br/>
 
-						Начинал свою деятельность с дизайна, где довелось впервые столкнуться с задачей <span className="accent-font">продвижения своих услуг и привлечения аудитории</span>, благодаря чему получил первичный опыт маркетинга.<br/><br/>
+						Занимаюсь <span className="accent-font">графическим и UI/UX дизайном более 3-х лет</span>, совмещая фриланс-проекты с основной деятельностью. Имею подтвержденный опыт создания дизайна для киберспортивных команд, турниров и IT-компаний: от брендинга до интерфейсов.<br/>
+						На фрилансе довелось впервые столкнуться с задачей <span className="accent-font">продвижения своих услуг и привлечения аудитории</span>, благодаря чему получил первичный опыт маркетинга и <span className="accent-font">развивал личный бренд</span>.<br/><br/>
 
-						Долгое время был связан с IT сферой и двигался в этом направлении: получил <span className="accent-font">IT специальность</span>, устроился <span className="accent-font">Системным администратором</span> и изучал <span className="accent-font">FrontEnd разработку</span> на React. Запустил <span className="accent-font">свой личный сайт</span> с персональным доменом (<span className="accent-font"><a href="https://insaneluv.ru/" target="_blank">insaneluv.ru</a></span>) и интегрировал <span className="accent-font">Яндекс метрику</span>.<br/><br/>
-
-						На данный момент, изучаю работу <span className="accent-font">бизнеса</span> с упором на <span className="accent-font">маркетинг</span> и хочу развить свои навыки в этой области. Читаю учебную литературу и маркетинговые кейсы компаний, смотрю тематические видео материалы.<br/><br/>
+						Долгое время был связан с IT сферой и двигался в этом направлении: получил <span className="accent-font">IT специальность</span>, устроился <span className="accent-font">Системным администратором</span> и изучал <span className="accent-font">FrontEnd разработку</span> на React. Создал <span className="accent-font">свой личный сайт</span> с персональным доменом (<span className="accent-font"><a href="https://insaneluv.ru/" target="_blank">insaneluv.ru</a></span>), запустил его в поисковых системах Яндекс и Google, интегрировал Яндекс метрику.<br/><br/>
 						</span>
 					</AboutContainer>
 				</InfoContainer>

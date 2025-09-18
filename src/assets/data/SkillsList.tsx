@@ -11,7 +11,9 @@ export const DesignSkillsFirst : Array<string> = [
   `Инфографика`,
   `Социальные сети`,
   `Одежда`,
-  `Интерфейсы`
+  `Интерфейсы`,
+  `Продвижение услуг`,
+  `Маркетинговые исследования`,
 ]
 
 export const AdminSkillsFirst : Array<string> = [
@@ -49,8 +51,9 @@ export const MarSkills : Array<string> = [
   `Маркетинговые исследования`,
   `SMM`,
   `SEO`,
-  `Яндекс метрика`,
-  `Яндекс директ`
+  `Яндекс Метрика`,
+  `Яндекс Директ`,
+  `Яндекс Вебмастер`,
 ]
 
 export const AISkills : Array<string> = [
