@@ -3,7 +3,8 @@ import Kandinsky from "./../media/portfolio/design/kandinsky.jpg";
 import StudJob from "./../media/portfolio/design/studjob.png";
 import crw from "./../media/portfolio/design/crw.png";
 import tournaments from "./../media/portfolio/design/tournaments.png";
-//import test from "./../media/portfolio/design/test.jpg";
+import linguaflow from "./../media/portfolio/design/linguaflow.png";
+
 
 
 
@@ -43,6 +44,14 @@ const initProject: Array<ProjectInt> = [
   },
   {
     id: 4,
+    tag: ["Графический дизайн", "Презентация", "Пет-проект"],
+    name: "Презентация LinguaFlow",
+    desc: "Информационная презентация услуг онлайн-платформы для изучения иностранных языков.",
+    img: linguaflow,
+    link: "linguaflow",
+  },
+  {
+    id: 5,
     tag: ["Графический дизайн", "Презентация"],
     name: "Курсовая научно исследовательская работа",
     desc: "Презентация для выступления.",
@@ -50,7 +59,7 @@ const initProject: Array<ProjectInt> = [
     link: "course-research-work",
   },
   {
-    id: 5,
+    id: 6,
     tag: ["Графический дизайн", "Турниры", "Таблицы", "Сетки", "Ростеры"],
     name: "Турниры",
     desc: "Работы связанные с турнирами.",
