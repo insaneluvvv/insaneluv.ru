@@ -88,15 +88,9 @@ const ItemsList = styled.div`
   gap: 10px;
 
   img {
-    width: 60%;
+    width: 100%;
     border-radius: 10px;
     box-shadow: 0px 0px 5px 4px black;
-    @media (max-width: 1080px) {
-      width: 80%;
-    }
-    @media (max-width: 600px) {
-      width: 100%;
-    }
   }
 
 `;
