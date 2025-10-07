@@ -68,7 +68,7 @@ const Home = () => {
 					<img className="avatar" src={Avatar} alt="Avatar" />
 					<img className="logo" src={InsaneLuvLogo} alt="InsaneLuv Logo" />
 					<ToProjectBtn onClick={scrollToProjects}>
-						<MdOutlineKeyboardDoubleArrowDown size={24} color="#202020"/> К ПРОЕКТАМ <MdOutlineKeyboardDoubleArrowDown size={24} color="#202020"/>
+						<MdOutlineKeyboardDoubleArrowDown size={24} color="#202020"/> <p>К ПРОЕКТАМ</p> <MdOutlineKeyboardDoubleArrowDown size={24} color="#202020"/>
 					</ToProjectBtn>
 				</AvatarContainer>
 				<InfoContainer>
@@ -316,6 +316,9 @@ const ToProjectBtn = styled.div`
 	position:relative;
 	top: -30px;
 	transition: 200ms ease;
+	p{
+		font-weight: 450;
+	}
 	&:hover {
 		background-color: #1b7e39;
 		box-shadow: 0px 0px 5px 4px black;

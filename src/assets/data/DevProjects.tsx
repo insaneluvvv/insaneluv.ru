@@ -1,4 +1,4 @@
-import PersonalSite from "./../media/portfolio/development/personalsite/PersonalSite_vieo.webp";
+import PersonalSite from "./../media/portfolio/development/personalsite.png";
 
 type ProjectInt = {
   id: number,
