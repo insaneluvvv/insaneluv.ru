@@ -3,17 +3,21 @@ import styled from "styled-components"
 
 import Header from './components/Header'
 import Footer from './components/Footer'
+
 import Home from './pages/HomePage'
+import PageNotFound from './pages/PageNotFound'
+
 import DesignProject from "./pages/DesProjectPage"
 import Logofolio from "./pages/DesProjectItems/LogofolioPage"
 import Kandinsky from "./pages/DesProjectItems/KandinskyPage"
 import StudJob from "./pages/DesProjectItems/StudJobPage"
 import CourseResearchWork from "./pages/DesProjectItems/CourseResearchWorkPage"
 import Tournaments from "./pages/DesProjectItems/TournamentsPage"
-import Test from "./pages/DesProjectItems/TestPage"
+import LinguaFlow from "./pages/DesProjectItems/LinguaFlowPage"
+
 import DevProject from "./pages/DevProjectPage"
 import PersonalSite from "./pages/DevProjectItems/PersonalSitePage"
-import PageNotFound from './pages/PageNotFound'
+
 
 
 const App = () => {
@@ -30,7 +34,7 @@ const App = () => {
               <Route path="/design-portfolio/studjob" element={<StudJob />} />
               <Route path="/design-portfolio/course-research-work" element={<CourseResearchWork />} />
               <Route path="/design-portfolio/tournaments" element={<Tournaments />} />
-              <Route path="/design-portfolio/test" element={<Test />} />
+              <Route path="/design-portfolio/linguaflow" element={<LinguaFlow />} />
             <Route path="/dev-portfolio" element={<DevProject />} />
               <Route path="/dev-portfolio/personal-site" element={<PersonalSite />} />
             <Route path="*" element={<PageNotFound />} />
